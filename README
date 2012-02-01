@@ -1,0 +1,20 @@
+Simple, buggy composite manager for the X Window System.
+It's written in C and use the xcb X C bindings.
+I did it for an interface design exam during University in circa 2010.
+
+It's fairly incomplete and only run using blackbox window manager.
+I wanted to learn some X11 server interaction.
+
+Contains expose-like effect for placing windows, ceverswitch-like effect to choose between windows and other glue stuff.
+Also, track changes to widnow and draw real-time (eg. scaled in the coverswitch or expose).
+
+Install xcb libraries and headers for damage, xfixes, xrender, composite, atom, then make, then:
+
+./finalcm
+
+during a blackbox session with some window already opened.
+
+Upper-left corner cursor triggers the expose-like effect, alt+tab does the coverswitch effect.
+Super+{+/-} zooms in and out the interface (it's buggy and unoptimized).
+
+It's pretty simple code, hope being a good resource for simple xcb examples.
